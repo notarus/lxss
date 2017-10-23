@@ -1,0 +1,10 @@
+alias opene="openExplorerShell"
+openExplorerShell(){
+    local windowsPathToLxss='C:\Users\notarus\AppData\Local\lxss'
+    local fixedPath=`pwd  | sed 's#\\/#\\\\#g'`
+    local launchPath="$windowsPathToLxss$fixedPath"
+    local explorer="/mnt/c/Windows/explorer.exe"
+    $explorer $launchPath
+
+}
+
